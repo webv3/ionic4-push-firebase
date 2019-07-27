@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Push Notificaction Firebase FCM
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <p>
+            Link para o tutorial
+            <a target="_blank"
+                href="https://www.djamware.com/post/5c6ccd1f80aca754f7a9d1ec/push-notification-using-ionic-4-and-firebase-cloud-messaging">FCM</a>
+        </p>
+        <p>Link para segunda <a routerLink="/second/price:1">pagina de exemplo</a></p>
+
+        <h1>Criar push com o postman</h1>
+        <h4>Estutura padrão</h4>
+
+        <p>
+            <strong>POST:</strong> https://fcm.googleapis.com/fcm/send
+        </p>
+        <h4>HEADER</h4>
+        <p>
+            <strong>Content-Type:</strong> application/json
+        </p>
+        <p>
+            <strong>Authorization:</strong>
+            key=AAAAChzud2Q:APA91bES-BkST9ykhnSM3j8k0_FYM3GwisyuxOHXZuaS_F2ZOY3bCl1r2ChE1Y2-kupgNMa3Cwub0Qxpufcgiyn8UBbmwxfXbkutAtqAsf1WCgyEllYzwmJKcIqmxoOYc9oGSjrpwnMP
+        </p>
+        <h4>BODY -> RAW</h4>
+<pre>
+{{
+'
+{
+    "notification":{
+        "title":"Ionic 4 Notification",
+        "body":"This notification sent from POSTMAN using Firebase HTTP protocol",
+        "sound":"default",
+        "click_action":"FCM_PLUGIN_ACTIVITY",
+        "icon":"fcm_push_icon"
+    },
+    "data":{
+        "landing_page":"second",
+        "price":"$3,000.00"
+    },
+        "to":"edc8rPUzpXo:APA91bE8LiPYCpfU0XkiyE_bcv9W9tgpnvnGVUVjSS15klQynGqxI7NiZWy_IK8ZoNHeterUrJ2BrYt_XyoOr8BTdDalxOBFPPX9a_Q9qC5jvvoY0889po585SRWjhyr2yhZbO-w3eN6",
+        "priority":"high",
+        "restricted_package_name":""
+    }
+'
+}}
+</pre>
+    </div>
+</ion-content>
